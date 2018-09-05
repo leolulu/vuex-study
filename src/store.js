@@ -7,8 +7,8 @@ export default new Vuex.Store({
   state: {
     vuexnum: 0,
     todos:[
-      {id:1,text:'第一个待办事项',done:true},
-      {id:2,text:'第二个待办事项',done:false},
+      {id:1,text:'第一个待办事项',done:false},
+      {id:2,text:'第二个待办事项',done:true},
       {id:3,text:'第三个待办事项',done:true}
     ]
   },
@@ -18,7 +18,7 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    changevuexnum(state, value) {
+    changevuexnumto(state, value) {
       state.vuexnum = value
     },
     vuexnumplus(state) {

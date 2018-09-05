@@ -5,7 +5,7 @@
                 <el-input v-model="formdata.id"></el-input>
             </el-form-item>
             <el-form-item>
-                <el-button type="primary" @click="onSubmit">立即创建</el-button>
+                <el-button type="primary" @click="onSubmit">changevuexnumto</el-button>
             </el-form-item>
         </el-form>
     </div>
@@ -22,11 +22,11 @@ export default {
   },
   methods: {
       onSubmit() {
-          
+          this.$store.commit('changevuexnumto',this.formdata.id)
       }
   },
 };
 </script>
 
-<style scoped　lang='scss'`> 
+<style scoped lang='scss'> 
 </style>
