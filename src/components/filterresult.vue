@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-card class="box-card">
-            <div v-for='item in this.$store.getters.doneTodos' :key='item.id' class="imsg">
+            <div v-for='item in doneTodos' :key='item.id' class="imsg">
                 <span>{{item.text}}</span>
             </div>
         </el-card>
@@ -9,13 +9,17 @@
 </template>
 
 <script>
-    export default {
-        
-    }
+import { mapGetters } from "vuex";
+
+export default {
+  computed: {
+    ...mapGetters(["doneTodos"])
+  }
+};
 </script>
 
 <style scoped lang='scss'>
-.imsg{
-    margin-top: 20px;
+.imsg {
+  margin-top: 20px;
 }
 </style>
